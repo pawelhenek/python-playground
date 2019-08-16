@@ -5,4 +5,5 @@ jobs:
       - image: circleci/python:3.5.6
     steps:
       - checkout
-      - run: echo "Yet another try"
+      - python3 unit-testing/basic-example.py
+      - pip install nose
