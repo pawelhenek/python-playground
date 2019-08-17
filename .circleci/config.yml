@@ -5,5 +5,7 @@ jobs:
       - image: circleci/python:3.5.6
     steps:
       - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.5/site-packages/
       - run: python3 unit-testing/basic-example.py
-      - run: pip install nose
+      - run: sudo pip install nose
